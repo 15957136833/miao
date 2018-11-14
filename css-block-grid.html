@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css-block-grid</title>
+  <style type="text/css">
+    *{background-color:rgba(0,0,0,0.08)}
+ul{list-style-type:none;
+    padding:10px;
+
+}
+
+
+li{height:100px;
+    width:100px;
+   box-sizing:border-box;
+  xborder:1px solid;
+  padding:10px;
+  xbackground-color:blue;
+   }
+
+section{xbackground-color:blue;}
+li:nth-of-type(n+4){
+                    margin-left:100px;
+  }
+li:nth-of-type(n+7){margin-left:200px;}
+li:nth-of-type(3n+4){margin-top:-300px;}
+section{height:100%;
+        xbackground-color:pink;}
+section:hover{margin-left:-20px;
+          margin-right:-20px;
+          margin-top:-10px;
+          height:calc(100% + 20px);
+          background-color:orange;
+              }
+  </style>
+</head>
+<body>
+ <ul>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+   <li><section></section></li>
+ </ul>
+</body>
+</html>
