@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>块元素</title>
+  <style type="text/css">
+ 		.header{background-color:black;
+        margin:0;
+        color:white;}
+		.header>p{width:600px;
+ 		 margin-left:calc(50% - 300px);}
+		.content{width:600px;
+          margin:auto;}
+		ul{
+    		list-style-type:none;
+    		padding:0;}
+		.chanpin li{box-sizing:border-box;
+            width:180px;
+            height:40px;
+            border:3px solid;
+            margin-top:15px;
+            background-color:pink;
+            text-align:center;
+            line-height:34px;}
+		.chanpin li:nth-child(n+5){
+                          margin-left:210px;}
+		.chanpin li:nth-child(n+9){margin-left:420px;}
+		.chanpin li:nth-child(4n+5){margin-top:-205px;}
+
+
+		.link{overflow:hidden;}
+		.link li{border-bottom:dotted 1px ;
+        		margin-bottom:-1px;
+       			}
+
+		.footer{margin:0;
+        		background:#ee82ee;
+  				text-align:center;
+       			}
+		.footer p{margin:0;}
+  
+  </style>
+</head>
+<body>
+  <div class="header">
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </div>
+  <div class="content">
+    <div class="text">页面主体      宽度600px 页面主体 宽度          600px 页面主体 宽度600px 页      面主体 宽度600px 页面主体 宽      度600px 页面主体 宽度600px      页面主体 宽度600px 页面主体      宽度600px 页面主体 宽度          600px 页面主体 宽度600px 页      面主体 宽度600px 页面主体 宽      度600px 页面主体 宽度600px     页面主体 宽度600px 页面主体       宽度600px 页面主体 宽度600px     页面主体 宽度600px 页面主体       宽度600px</div>
+    <ul class="chanpin">
+      <li>宽180高40(包含边框)          </li>
+      <li>水平间隙30px</li>
+      <li>垂直间隙15px</li>
+      <li>边框宽度3px</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
+    <ul class="link">
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+    </div>
+    <div class="footer">
+      <p>©版权所有</p>
+      <p>本页所有布局均使用块元素        </p></div>
+  
+ 
+</body>
+</html>
