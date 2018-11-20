@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>oald-layout-position</title>
+  <style type="text/css">
+  	*{background-color:rbga(0,0,0,0.08);}
+html,body{height:100%;
+       
+          padding:0;
+          margin:0;
+  
+      }
+
+div{box-sizing:border-box;}
+
+.a{width:20%;
+  background-color: orange;
+  height:100%;
+  border-right:1px solid black;}
+
+.b{position:fixed;
+  width:40%;
+  height:100%;
+  background-color: tan;
+  left:20%;
+  top:0;
+  border-right:1px solid;}
+
+.c{position:fixed;
+   width:40%;
+    height:100%;
+    background-color: violet;
+    top:0;
+    right:0;}
+span{position:absolute;
+      width:50%;
+      height:100%;
+      xackground-color: blue;
+      border-right:1px solid;
+      box-sizing:border-box;
+     
+      }
+em{position:absolute;
+  width:50%;
+  height:100%;
+  background-color: yellow;
+  right:0;
+ }
+section{width:100%;
+  height:50px;
+  background-color: #bff;
+   border-bottom:1px solid;}
+  </style>
+</head>
+<body>
+<div class="a">牛津词典</div>
+<div class="b"><section>牛津词典</section>牛津词典</div>
+<div class="c"><span>牛津词典</span><em>牛津词典</em></div>
+</body>
+</html>
