@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>checkbox的IOS样式</title>
+  	<style type="text/css">
+  		*{background-color: xrgba(0,0,0,0.08);}
+
+		.circle{margin-top:30px;
+        	width:100px;
+        	height:100px;
+        	background-color: white;
+        	border-radius:50px;
+        	margin-left:100px;
+        	text-shadow:1px 1px 8px ;
+       		display:block;
+        	transition:1s;
+        	box-shadow:
+                -100px 0px 0px green,
+                -95px 0px 0px green,
+                -90px 0px 0px green,
+                -85px 0px 0px green,
+                -75px 0px 0px green,
+                -70px 0px 0px green,
+                -65px 0px 0px green,
+                -60px 0px 0px green,
+          
+                -55px 0px 0px green,
+                -50px 0px 0px green,
+                -45px 0px 0px green,
+                -40px 0px 0px green,
+                -35px 0px 0px green,
+                -30px 0px 0px green,
+          
+               -25px 0px 0px green,
+                -20px 0px 0px green,
+                -15px 0px 0px green,
+                -10px 0px 0px green,
+                -5px 0px 0px green,
+                0px 0px 0px green,
+          
+                5px 0px 0px green
+                ;                 }
+
+			#foo:checked+.circle{margin-left:0;
+           		box-shadow:
+                -5px 0px 0px grey,
+                0px 0px 0px grey,
+                5px 0px 0px grey,
+                10px 0px 0px grey,
+                20px 0px 0px grey,
+                25px 0px 0px grey,
+                30px 0px 0px grey,
+                35px 0px 0px grey,
+          
+                40px 0px 0px grey,
+                45px 0px 0px grey,
+                50px 0px 0px grey,
+                55px 0px 0px grey,
+                60px 0px 0px grey,
+                65px 0px 0px grey,
+          
+               	70px 0px 0px grey,
+                75px 0px 0px grey,
+                80px 0px 0px grey,
+                85px 0px 0px grey,
+                90px 0px 0px grey,
+                95px 0px 0px grey,
+          
+                100px 0px 0px grey
+                ;
+          		transition:1s;}
+
+			.off{position:absolute;
+    			top:71px;
+    			left:60px;
+    			transition:2.5s;
+    			}
+			.on{ position:absolute;
+    			top:71px;
+    			left:140px;
+ 
+   				color:transparent;}
+
+			#foo:checked~div>.off{
+                     x display:none;
+                      transition:1s;
+                      color:transparent;
+  
+					}
+			#foo:checked~div>.on{color:violet;
+                      display:inline;
+                      transition: color 2.5s;}
+
+
+
+
+  			</style>
+</head>
+<body>
+  <input type="checkbox" id="foo" hidden>
+<label for="foo" class="circle"></label>
+<div> <span class="on">开</span>
+  <span class="off">关</span></div>
+ 
+</body>
+</html>
