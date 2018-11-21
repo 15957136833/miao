@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>radio-slider</title>
+  	<style type="text/css">
+  		
+		main{position:relative;
+
+    		width:500px;
+    		height:188px;
+    		border:1px solid;
+			   	x overflow:hidden;}
+			input{position:fixed;
+			      z-index:5;}
+			#a{top:160px;
+			  left:350px;}
+			#b{top:160px;
+			  left:370px;}
+			#c{top:160px;
+			  left:390px;}
+			#d{top:160px;
+			  left:410px;}
+			#e{top:160px;
+			  left:430px;}
+
+			
+			img{position:absolute;
+			    width:100%;
+			    opacity:0;
+			   left:0;
+			    transition:2s;
+			   }
+			
+			#a:checked~main>.p1{left:0;
+			                    opacity:1;
+			                    transition:2s;}
+			#b:checked~main>.p2{left:0;
+			                    opacity:1;
+			                    transition:2s;}
+			#c:checked~main>.p3{left:0;
+			                    opacity:1;
+			                    transition:2s;}
+			#d:checked~main>.p4{left:0;
+			                    opacity:1;
+			                    transition:2s;}
+			#e:checked~main>.p5{left:0;
+			                    opacity:1;
+			                    transition:2s;}
+
+  	</style>
+</head>
+<body>
+
+  <input type="radio" name="foo" id="a" checked>
+  <input type="radio" name="foo" id="b">
+  <input type="radio" name="foo" id="c">
+  <input type="radio" name="foo" id="d">
+  <input type="radio" name="foo" id="e">
+  
+  
+<main>
+<img class="p1" src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg" alt="">
+<img class="p2" src="https://i1.mifile.cn/a4/xmad_15427940817559_aubLz.jpg" alt="">
+<img class="p3" src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg" alt="">
+<img class="p4" src="https://i1.mifile.cn/a4/xmad_15427624932575_mcJkj.jpg" alt="">
+<img class="p5" src="https://i1.mifile.cn/a4/xmad_15427183282728_fjeaN.jpg" alt="">
+ </main> 
+</body>
+</html>
