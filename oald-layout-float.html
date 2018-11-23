@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>oald-layout-float</title>
+  <style type="text/css">
+        
+    html,body{height:100%;
+              margin:0;
+              overflow:hidden;
+              border-right:none;}
+    *{border-right:solid;}
+    
+    aside{width:20%;
+          height:100%;
+          background-color: tan;
+          float:left;}
+    section{
+            float:right;
+            height:100%;
+            width:20%;
+            background-color: blue;
+            border-right:none;
+        
+    }
+    div{float:right;
+        height:100%;
+        width:20%;
+        background-color:yellow;}
+    
+    main{height:100%;
+        background-color: violet;
+        overflow:hidden;
+        
+      }
+    p{height:100px;
+      margin:0;
+      background-color: #f55;
+      border-right:none;
+      border-bottom:solid;}
+
+  </style>
+</head>
+<body>
+  <aside>牛津词典</aside>
+  <section>牛津词典</section>
+  <div>牛津词典</div>
+  <main>
+    <p>牛津词典</p>
+    牛津词典
+  </main>
+
+</body>
+</html>
