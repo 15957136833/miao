@@ -5,39 +5,199 @@
   <meta name="viewport" content="width=device-width">
   <title>九宫格</title>
   <style type="text/css">
-    html,body{width:100%;
-          height:100%;
-          margin:0;
-         
-          }
+    .first{padding:0;
+      list-style:none;
+      width:165px;
+      border:2.5px solid blue;
+    display:flow-root;
+      margin:auto;
+      cursor:pointer;
+      }
+    .first>li{float:left;
+              width:50px;
+            text-align:center;
+              border:2.5px solid blue;
+              color:green;
+              line-height:50px
+              }
+    
+    .first>li:hover{border:2.5px solid red;
+            box-shadow:0 0 0 2.5px red;
+            position:relative;
+            z-index:8;}
+    
+    
+    
+    .second{padding:0;
+            list-style:none;
+            width:170px;
+            font-size:0;
+            padding-bottom:5px;
+            cursor:pointer;
+            margin:auto;
+            }
+    .second>li{display:inline-block;
+              width:50px;
+              height:50px;
+              border:5px solid blue;
+            margin-right:-5px;
+              margin-bottom:-5px;
+              font-size:16px;
+              line-height:50px;
+              text-align:center;
+              color:green;
+              }
+    
+    
+    .second>li:hover{
+                    border:5px solid red;
+                    position:relative;
+                    z-index:8;
+    }
+    
+    
+    
+    table{ border-collapse:separete;
+      border-spacing:5px;
+      background-color: blue;
+      margin:auto;
+      
+      
+      }
+    
+    td{width:50px;
+      height:50px;
+      background-color:white;
+      color:green;
+      line-height:50px;
+      text-align:center;
+      cursor:pointer;
+      font-size:medium;
+    }
+    
+    td:hover{position:relative;
+              z-index:8;
+              box-shadow:0 0 0 5px red;}
+    
+    
+    
+    .forth{list-style:none;
+          
+          width:170px;
+          overflow:hidden;
+          margin:auto;
+       
+          padding-bottom:5px;
+          padding-left:0;}
+    .forth>li{float:left;
+            display:inline;
+              }
+    
+    a{display:inline-block;
+      width:50px;
+      height:50px;
+      border:5px solid blue;
+      margin-right:-5px;
+      margin-bottom:-5px;
+      text-decoration: none;
+      text-align:center;
+      line-height:50px;
+      color:green;}
+      
+    
+    
+    a:hover{border:5px solid red;
+            position:relative;
+            z-index:8;}
+    
+    
+    
     div{position:relative; 
-        margin:auto;
-        top: 50%;
-        height:137px;
-        width:137px;
-        background-color:rgb(0,0,240);
-        cursor:pointer;}
-
+            margin:auto;
+          
+            height:170px;
+            width:170px;
+            background-color:rgb(0,0,240);
+            cursor:pointer;}
+    
     section{box-sizing:border-box;
-        width:39px;
-        height:39px;
-        margin-left:5px;
-        margin-top:5px;
-        background-color:rgb(240,240,240);
-        
-        float:left;
-        line-height:39px;
-        text-align:center;
-        color:green;
-        font-family:"宋体"}
+            width:50px;
+            height:50px;
+            margin-left:5px;
+            margin-top:5px;
+            background-color:rgb(240,240,240);
+            
+            float:left;
+            line-height:39px;
+            text-align:center;
+            color:green;
+            font-family:"宋体"}
 
 
 
 
-section:hover{ box-shadow:  0px 0px 0px 5px red;}
+    section:hover{ box-shadow:0px 0px 0px 5px red;}
   </style>
 </head>
 <body>
+<h1>第一种:浮动</h1>
+  <ul class="first">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+<h1>第二种：inline-block</h1>
+  <ul class="second">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
+<h1>第三种：
+<table>
+  <caption>表格</caption>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+</table>
+  <h1>第四种：IE兼容</h1>
+  
+    <ul class="forth">
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+      <li><a href="">9</a></li>
+    </ul>
+
+<h1>第五种，利用浮动的margin特性 </h1>
 <div>
   <section>1</section>
   <section>2</section>
