@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>五种办法实现水平垂直居种加两种常见布局</title>
+  <style type="text/css">
+    *{background-color: rgba(0,0,0,0.08);}
+
+    div{width:200px;
+        height:200px;
+        position:relative;
+        }
+    /* 定位 */
+    .first>section{width:100px;
+            height:100px;
+            background-color: violet;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin:auto;
+          }
+    /* 定位2 */
+    .first2{position:relative;}
+    
+    .first2>section{position:absolute;
+          background-color: yellow;
+          width:100px;
+          height:100px;
+          top:50%;
+          left:50%;
+          margin-top:-50px;
+          margin-left:-50px;
+    }
+    
+    
+    /* 行内块元素垂直布局 */
+    .second{text-align:center;
+            font-size:0;
+            line-height:200px;
+            }
+    .second>section{ font-size:medium;
+                    background-color: tan;
+                    display:inline-block;
+                    border:1px solid ;
+                    width:100px;
+                    height:100px;
+                    vertical-align:middle;
+                    line-height:normal;
+                    }
+    
+    /* 增加隐形div */
+    .hidden{height:50%;
+           
+            border:1px solid;
+            margin-bottom:-50px;}
+    .main{margin:auto;
+          width:100px;
+          height:100px;
+          background-color: pink;
+          
+    }
+    /* 定margin */
+    .third2{border:1px solid transparent;}
+    .third2>section{width:100px;
+                    height:100px;
+                    background-color:orange;
+                    
+                  margin:auto;
+                    margin-top:50px;
+                    }
+    /* 表格居中 */
+    div.forth{display:table;
+              border:solid red;
+              padding:40px;}
+    
+    .forth>section{display:table-cell;
+                  background-color: orange;
+                  border:solid;
+                  vertical-align:middle;
+                  text-align:center;
+                  }
+    /* 圣杯布局 */
+    html,body{width:100%;}
+    div.shengbei{width:100%;}
+    div.left{float:left;
+            background-color: orange;
+            width:20%;}
+    div.right{float:right;
+              background-color: blue;
+      width:20%;}
+    div.center{
+            width:auto;
+              background-color: yellow;
+              overflow:hidden;
+    }
+    /* 双飞翼布局 */
+    
+    div.p2{width:100%;
+          border:solid red;
+          overflow:hidden;
+          height:auto;}
+    .zuo{width:50%;
+        background-color: tan;
+        float:left;
+        height:auto;
+        padding-bottom:9999px;
+        margin-bottom:-9999px;}
+    .you{width:50%;
+        background-color: violet;
+        float:right;
+        height:auto;
+        padding-bottom:9999px;
+        margin-bottom:-9999px;
+        }
+  </style>
+</head>
+<body>
+  <h1>第一种：定位</h1>
+  <h2>1>absulote加margin:auto;</h2>
+  <div class="first">
+    <section>
+      Lorem ipsum dolor sit amet.
+    </section>
+  </div>
+  <h2>2>absulute加top,left:-50%;</h2>
+  <div class="first2">
+    <section>Lorem ipsum dolor sit amet.</section>
+  </div>
+  <h2>第二种:行内块元素的垂直布局</h2>
+    <div class="second">
+      <section>Lorem ipsum dolor sit amet.</section>
+    </div>
+  <h1>第三种：块元素垂直布局</h1>
+  <h2>1>增加一个隐形的块元素</h2>
+    <div class="third">
+      <section class="hidden"></section>
+      <section class="main">
+        
+      </section>
+    </div>
+  <h2>2>定margin</h2>
+  <div class="third2">
+    <section></section>
+  </div>
+  <h2>第四种 表格</h2>
+  <div class="forth">
+    <section>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </section>
+  </div>
+  <h1> 两种常见布局：圣杯与双飞翼</h1>
+  <h2>1>圣杯</h2>
+  <div class="shengbei">
+    <div class="left"></div >
+    <div class="right"></div>
+    <div class="center">aaa</div>
+  </div>
+  <h2>2>双飞翼布局</h2>
+  <div class="p2">
+    <div class="zuo">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nihil natus ullam porro architecto qui modi quibusdam animi est commodi dolorem voluptatum quisquam placeat corrupti dolor, voluptas iusto amet mollitia corporis maiores nobis pariatur? Dolore   officia explicabo quod, numquam ratione.</div>
+    <div class="you">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente unde necessitatibus architecto sunt ut eius, omnis. Hic, placeat fuga tenetur cupiditate velit aspernatur architecto minima nemo expedita recusandae  distinctio dolor?</div>
+  </div>
+</body>
+</html>
