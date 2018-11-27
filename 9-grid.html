@@ -57,27 +57,20 @@
     
     
     
-    table{ border-collapse:separete;
-      border-spacing:5px;
-      background-color: blue;
-      margin:auto;
-      
-      
-      }
-    
-    td{width:50px;
-      height:50px;
-      background-color:white;
-      color:green;
-      line-height:50px;
-      text-align:center;
-      cursor:pointer;
-      font-size:medium;
-    }
-    
-    td:hover{position:relative;
-              z-index:8;
-              box-shadow:0 0 0 5px red;}
+   table{margin:auto;
+      border-collapse:collapse;
+}
+col{border:5px solid blue;}
+tr{border:5px solid blue;}
+td{width: 50px;
+  height: 50px;
+  text-align:center;
+  color:green;
+  font-size:medium;}
+td:hover{
+        border:5px solid red;
+}
+
     
     
     
@@ -167,6 +160,9 @@
 <h1>第三种：
 <table>
   <caption>表格</caption>
+  <col>
+  <col>
+  <col>
   <tr>
     <td>1</td>
     <td>2</td>
