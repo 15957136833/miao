@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>mobike 响应页面</title>
+  <style type="text/css">
+   
+    
+    html,body{width:100%;}
+    
+    div.header{width:100%;   
+              color:white;
+            position:absolute;
+          
+            z-index:8;}
+    div.title{width: 865px;
+              margin:auto;}
+    div.header>*{cursor:pointer;}
+    
+    nav{line-height:16px;
+        width: 100%;
+        font-size:0;
+        padding:0;}
+    
+    ul{display:inline-block;
+      list-style:none;
+      font-size:medium;
+      }
+    
+    li{display:inline-block}
+    
+    ul.only{font-size:24px;
+            font-family:华文琥珀;
+            width:500px;
+          position:relative;
+         
+            }
+    ul.product{width: 323px;
+              position:relative;
+              padding:0;}
+    
+    ul.product ul{width: 195px;
+                  height: 160px;
+                  position:absolute;
+                  top:30px;
+                  left:-9px;
+                  background-color:#fff;
+                  padding:0;
+                  color:black;
+                  display:none;
+                  padding:15px;
+                  box-sizing:border-box;}
+    ul.product ul::before{
+                      content:'';
+                      border-bottom:10px solid white;
+                      border-left:10px solid transparent;
+                      border-right:10px solid transparent;
+                      position:relative;
+                      top:-41px;
+                      
+                    }
+    ul.only::before{content:'摩拜单车';
+                    font-size:14px;
+                    position:absolute;
+                    top:16px;
+                    left:49px;
+                  }
+    ul.product>li{
+                  margin-right:29px;
+    }
+    span{font-size:.5em;
+        color:rgba(0,0,0,0.6)}
+    li>ul>li{display:block;
+              height:40px;}
+    li:hover>ul{display:block;}
+    .classic>li:hover{color:orange;}
+    
+    /* header完成 */
+    
+    div.headpicture{width:100%;
+                    height:auto;
+                    min-height:610px;
+                    overflow:hidden;
+                    position:relative;
+                    }
+    div.headpicture>img{max-width:100%;
+        min-height:610px;}
+    
+    div.let{position:absolute;
+            height:130px;
+            left:0;
+            right:0;
+            margin:auto;
+            width:390px;
+            top:0;
+            bottom:0;
+            color:white;
+          
+            
+            }
+    h1.logo{font-size:250%;}
+    a{width:160px;
+      height:30px;
+      background-color: rgba(0,0,0,0.6);
+      text-decoration:none;
+      color:white;
+      display:block;
+      border-radius:9px;
+      padding:4px;}
+    /* logo完成 */
+    div.bottom-item{width:100%;
+                    position:absolute;
+                    bottom:0px;
+                    background-color: rgba(0,0,0,0.4);
+                  height:1.5em;
+                  line-height:1.5em;}
+    div.bottom-item>section{width:830px;
+                      margin:auto;
+                      color:white;
+                      font-size:0.8em;
+              }
+    div.bottom-item>section::before{content:'NEWS';
+                        font-size:0.6em;
+                        background-color: red;
+                        border-radius:5px;
+                        padding:1px;}
+    /* 头图完成？ */
+    div.four-p{xheight:210px;
+              overflow:hidden;
+              border:1px solid transparent;}
+    div.p1p2{width:50%;}
+    div.p3p4{width:50%;}
+    .p1{background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg);
+        width:50%;
+        height:210px;
+        background-position:50%;
+        background-repeat: no-repeat;
+       
+        background-size:530px;
+        }
+    
+    
+    .p2{background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg);
+        width:50%;
+        height:210px;
+        background-position:50%;
+        background-repeat: no-repeat;
+       
+        background-size:530px;
+        }
+    .p3{background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg);
+        width:50%;
+        height:210px;
+        background-position:50%;
+        background-repeat: no-repeat;
+       
+        background-size:530px;
+        }
+    
+    .p4{background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg);
+        width:50%;
+        height:210px;
+        background-position:50%;
+        background-repeat: no-repeat;
+       
+        background-size:530px;
+        }
+    div.four-p div{float:left;
+                  border:1px solid white;
+                  box-sizing:border-box;
+                  text-align:center;
+                  color:white;
+                  line-height:4em;}
+    /* 4图完成 */
+    div.wechat{width: 850px;
+              margin:auto;
+              height:67px;
+           
+              padding:2px;
+             
+              }
+    div.wechat img{height:3.5em;
+                  float:left;
+                  font-size:0.8em;
+                  margin:0;
+                  }
+    div.wechat>div{width:33%;
+                 
+                  float:left;
+                  min-width:160px;
+                  height:4em;
+                  position:relative;
+                  z-index:8;}
+    /* 微信图标完成 */
+    div.footer{width:850px;
+              margin:auto;
+              height:170px;
+           
+              }
+    div.footer>aside{width:180px;
+                  padding:22px;
+                    padding-top:9px;
+                  padding-left:0;
+                  float:left;
+                  
+                  }
+    div.footer img{width:140px;
+                 
+                  }
+    div.footer>main{float:right;
+                    }
+    div.footer>main>table{border-collapse:separate;
+    border-spacing:76px 9px;
+    padding:0;
+    empty-cells:hide;
+    height:170px;}
+    div.footer>main>table td{cursor:pointer;
+                            font-size:12px}
+    div.footer>main>table th{font-size:18px;}
+    div.footer>main>table td:hover{color:orange;}
+    /* 公司地址完成 */
+    div.foot{height:150px;
+            box-sizing:border-box;
+            padding:60px;
+            padding-left:0;
+      }
+    div.foot>span
+    {font-size:0.5em;
+              height:150px;
+      
+          
+    }
+    div.foot>span
+    >img{width:1em;}
+    div.foot{width:850px;
+            margin:auto;
+    }
+    div.chengxin{width:2em;
+                float:right;
+                position:relative;
+    }
+    div.chengxin>img{width:2em;
+      }
+    div.chengxin2::before{content:'诚信经营，放心消费';
+                        position:absolute;
+                        width:144px;
+                        top:-51px;
+                        left:-64px;
+                        height:21px;
+                        background-color: rgba(0,0,0,0.7);
+                        color:white;
+                        padding:4px;
+                        border-radius:7px;
+    display:none;}
+    
+    div.chengxin2::after{content:'';
+                        width:0;
+                        height: 0;
+                        border-top:10px solid rgba(0,0,0,0.7);
+                        border-left:10px solid transparent;
+                        border-right:10px solid transparent;
+                        position:absolute;
+                        top:-22px;
+                        left:3px;
+      display:none;}
+    .chengxin>img:hover+div::before{display:block;}
+    .chengxin>img:hover+div::after{display:block;}
+    
+    
+    
+    /* 开始响应页面 */
+    div.kaiguan{position:absolute;
+                z-index:14;
+              right:20px;
+                top:100px;
+          x   border:1px solid black;
+          x   background-color: blue;
+              width:40px;
+              display:none;
+              cursor:pointer;
+              color:white;
+    }
+    .off{display:none;}
+    @media screen and (max-width:1080px){ul.product{display:none;}
+        div.header{width:100%;}
+      div.title{width:100%;}
+      nav{width:100%;}
+      ul.only{width:100%;}
+        #foo:checked~.hengfu{display:block;}
+        div.kaiguan{display:block}
+        #foo:checked+.kaiguan>.on{display:none;}
+      #foo:checked+.kaiguan>.off{display:block;}
+     
+    }
+    
+    
+    @media screen and (max-width:1080px){
+      div.p1p2{width:100%;}
+      div.p3p4{width:100%;}
+      div.foot{width:100%;}
+    }
+    @media screen and (max-width:640px){
+      div.four-p div{width:100%;}
+                                      
+    }
+    /* 四图响应完成 */
+    @media screen and (max-width:1080px){
+      div.wechat{width:100%;}
+      div.kaiguan{display:block;}
+    }
+    @media screen and (max-width:640px){
+      div.wechat div{width:50%;} 
+      div.wechat{height:auto;
+                overflow:hidden;}
+      div.footer>aside{float:none;
+                    
+      }
+      div.footer>main{float:left;}
+      div.footer>main>table{border-spacing:7px;}
+      div.footer{height:auto;
+                overflow:hidden;}
+    }
+    
+    /* 开头菜单 */
+    div.caidan
+    div.hengfu{width:100%;
+              height:368px;
+              background-color: rgba(255,0,0,0.4);
+              position:absolute;
+              top:0;
+              cursor:pointer;
+            display:none;
+                      
+    }
+    div.hengfu>ul{
+                  color:white;
+                  width:100%;
+                  padding:0;
+    }
+    div.hengfu li{
+                  display:block;
+                  border-bottom:1px solid rgba(0,0,0,0.09);
+                  width:100%;
+                  height:58px;
+                  line-height:50px;
+                padding-left:45px;
+                  
+                  
+    }
+    div.hengfu li>span{color:white;
+                      font-size:1.5em}
+    
+    
+   
+
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title">
+    <nav>
+      <ul class="only">
+        <li >mobike</li>
+      </ul>
+      <ul class="product">
+        <li>产品
+          <ul class="classic">
+            <li>经典版<br><span>轻便，可靠</span>
+              
+            </li>
+            <li>轻骑<br><span>城市随处可骑</span>
+            </li>
+            <li>智能锁<br><span>摩拜智造，天生靠得住</span>
+            </li>
+          
+          </ul>
+        </li>
+        <li>摩拜科技</li>
+        <li>关于</li>
+        <li>广告合作</li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="headpicture">
+  <img src="https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-4.jpg" alt="">
+  <div class="let">
+    <h1 class="logo">让自行车回归城市</h1>
+    <a href="">立即开始使用  Mobike</a>
+    
+    </div>
+  <div class="caidan">
+      <input type="checkbox" id="foo" hidden>
+      <div class="kaiguan">
+      <label class="on" for="foo" style="font-size:50px;position:absolute">=</label>
+      <label class="off" for="foo" style="font-size:50px;">+</label>  
+      </div>
+      <div class="hengfu">
+        <ul>
+          <li></li>
+          <li><span>产品</span></li>
+          <li><span>摩拜科技</span></li>
+          <li><span>关于</span></li>
+          <li><span>广告合作</span></li>
+          <li><span>立即开始使用Mobike</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="bottom-item"><section>“摩拜公交”小程序上线  线上购买地铁票省时省力</section></div>
+</div>
+<div class="four-p">
+ <div class="p1p2">
+   <div class="p1">大国品牌</div>
+   <div class="p2">摩拜科技</div>
+</div>
+<div class="p3p4">
+ <div class="p3">摩拜生活</div>
+ <div class="p4">摩拜校招</div>
+</div>
+</div>
+  
+<div class="wechat">
+  <div class="mark1"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png" alt="">微信小程序<br>
+微信扫一扫，直接用车</div>
+  <div class="mark2"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-rp.png" alt="">红包车<br>
+骑摩拜，能赚钱</div>
+  <div class="mark3"><img src="https://mobike.com/cn/assets/themes/moby/img/icon-credit.png" alt="">摩范分<br>
+文明骑行，信用生活</div>
+</div>
+<hr>
+<div class="footer">
+  <aside><img src="https://mobike.com/cn/assets/themes/moby/img/logo-text.svg" alt="">Beijing Mobike Technology Co., Ltd<br>
+客服电话 400-811-7799
+北京摩拜科技有限公司</aside>
+  <main>
+    <table>
+      <tbody>
+        
+        <tr>
+          <th>产品</th>
+          <th>生活</th>
+          <th>关于</th>
+          <th>社交网络</th>
+        </tr>
+        <tr>
+          <td>经典版</td>
+          <td>城市</td>
+          <td>关于Mobike</td>
+          <td>微博</td>
+        </tr>
+        <tr>
+          <td>轻骑</td>
+          <td></td>
+          <td>加入我们</td>
+          <td>微信</td>
+        </tr>
+        <tr>
+          <td>智能锁</td>
+          <td></td>
+          <td>练习我们</td>
+          <td>知乎专栏</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>服务协议</td>
+          <td>Facebook</td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </main>
+</div>
+  <hr>
+<div class="foot">
+    <div class="chengxin">
+    <img src="https://mobike.com/cn/assets/themes/moby/img/footer-chengxin.jpg" alt=""><div class="chengxin2"></div>
+</div>
+  <span>京 ICP 备15053449 号 <img src="https://mobike.com/cn/assets/themes/moby/img/beian-icon.png" alt=""> 京公网安备 11010502032956 号 <br>增值电信业务经营许可证编号：京B2-20170053</span>
+
+</div>
+</body>
+</html>
