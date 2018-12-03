@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>bootstrap-table</title>
+  <style type="text/css">
+    
+    
+    .table{
+      border-collapse:collapse;
+     
+      text-align:left;
+      width:100%;
+      line-height:70px;
+      border-color:#dee2e6;
+    }
+    .table *{
+      border-color:inherit;
+    }
+    
+    .table thead tr{
+      border-bottom-width:2px;
+      border-bottom-style:solid;
+    }
+    
+    .table tr{
+      border-top-width:1px;
+      border-top-style:solid;
+      
+    }
+    
+    
+    .table-dark{
+      background-color: #212529;
+      color:white;
+      
+    }
+    .table-dark tr{
+      border-color:#32383e;
+       
+    }
+    
+    .thead-dark{
+      background-color: #212529;
+      color:white;
+    }
+    .thead-light{
+      background-color: #e9ecef;
+      color:#212529;
+    }
+    
+    .table-striped tbody tr:nth-child(odd){
+      background-color: #f2f2f2;
+    }
+    .table-striped.table-dark tbody tr:nth-child(odd) {
+      background-color: #2c3034;
+    }
+    .table-bordered,.table-bordered td,.table-bordered th{
+      border-width:1px;
+      border-style:solid;
+      
+    }
+    .table-hover tbody tr:hover{
+      background-color: #ececec;
+    }
+    .table-hover.table-dark tbody tr:hover{
+      background-color: #323539;
+    }
+    
+    .table-scroll{
+      
+      overflow-x:auto;
+    display:block;
+      
+    }
+    .table-scroll th,.table-scroll td{
+      min-width:150px;
+      
+    }
+    
+    
+    .table-active{
+      background-color: #dadada;
+    }
+    .table-primary{
+      background-color: #b8daff;
+    }
+    .table-secondary{
+      background-color: #d6d8d8;
+    }
+    .table-success{
+      background-color: #c3e6cb;
+    }
+
+  </style>
+</head>
+<body>
+<table class="table xtable-dark table-striped table-bordered table-hover xtable-scroll ">
+  <thead class="">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table><hr><hr><hr><hr><hr><hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active">
+        <th scope="row">Active</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr>
+        <th scope="row">Default</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+
+      
+      <tr class="table-primary">
+        <th scope="row">Primary</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-secondary">
+        <th scope="row">Secondary</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-success">
+        <th scope="row">Success</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-danger">
+        <th scope="row">Danger</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-warning">
+        <th scope="row">Warning</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-info">
+        <th scope="row">Info</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-light">
+        <th scope="row">Light</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+      <tr class="table-dark">
+        <th scope="row">Dark</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
