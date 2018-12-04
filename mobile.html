@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>mobile</title>
   <style type="text/css">
-	     
-    	*{background-color: rgba(0,0,0,0.08);}
+        *{background-color: rgba(0,0,0,0.08);}
     html,body{
       width:100vw;
       height:100vh;
-      
-      overflow:auto;
+      overflow:hidden;
       margin:0;
     }
     div.picture{
@@ -24,22 +22,19 @@
     div.picture1{
       width: 265px;
       height: 398px;
-      background-image: url(https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
-     background-position: 50%;
-      background-size:cover ;
+    
+    
       position:absolute;
       top:89px;
       left:136px;
-      
+       z-index:0;
     }
     
     
     div.picture2{
       width:265px;
       height: 443px;
-      background-image: url(https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
-      background-size:cover;
-      background-position: 50%;
+    
       position:absolute;
       top:225px;
       left:268px;
@@ -48,41 +43,42 @@
     div.picture3{
       width: 265px;
       height: 398px;
-      background-image: url(https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
-      background-position: 50%;
-      background-size:cover ;
+      
       position:absolute;
       top:375px;
       left:401px;
-     
+    
     }
     div>div:hover{
       z-index:8;
-    
     }
     
-    @media screen and (max-width:420px) and (min-resolution:2dppx){
+    @media screen and (max-width:600px)and (min-width:200px) {
       div.picture{
        width:100%;
       height: 100%;
     }
       div.picture1{
         width: 24.5%;
-        height: 20.72%;
+        height:auto;
+        background-size:100% ;
         top:4.635%;
         left:17%;
     }
       div.picture2{
           width:24.53%;
-          height: 23.07%;
+         height:auto;
           top:11.718%;
           left:33.5%;
       }
       div.picture3{
         width: 24.5%;
-        height: 20.72%;
+       height:auto;
         top:19.531%;
         left:50.1%;
+      }
+      img{
+        width:100%;
       }
     }
   </style>
@@ -90,10 +86,15 @@
 <body>
   <div class="picture">
     <div class="picture1">
+      <img src="https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0" alt="">
       
     </div>
-    <div class="picture2"></div>
-    <div class="picture3"></div>
+    <div class="picture2">
+      <img src="https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0" alt="">
+    </div>
+    <div class="picture3">
+      <img src="https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0" alt="">
+    </div>
   </div>
 </body>
-</html>
+</html
