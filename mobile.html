@@ -5,94 +5,85 @@
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
   <style type="text/css">
-	  
-	*{background-color: rgba(0,0,0,0.08);}
-html,body{
-  width:100vw;
-  height:100vh;
-  overflow:hidden;
-  margin:0;
-}
-div.picture{
-  width:800px;
-  height: 800px;
-  margin:auto;
-  position:relative;
-}
-
-div.picture1{
-  width: 265px;
-  height: 398px;
-  background-image: url(https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
- background-position: 50%;
-  background-size:cover ;
-  position:absolute;
-  top:89px;
-  left:136px;
-  z-index:-1;
-}
-
-
-div.picture2{
-  width:265px;
-  height: 443px;
-  background-image: url(https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
-  background-size:cover;
-  background-position: 50%;
-  position:absolute;
-  top:225px;
-  left:268px;
-  z-index:0;
-  }
-div.picture3{
-  width: 265px;
-  height: 398px;
-  background-image: url(https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
-  background-position: 50%;
-  background-size:cover ;
-  position:absolute;
-  top:375px;
-  left:401px;
-  z-index:-6;
-}
-div.picture1:hover{
-  z-index:8;
-
-}
-
-div.picture2:hover{
-  z-index:8;
-
-}
-div.picture3:hover{
-  z-index:8;
-
-}
-
-@media screen and (max-width:420px){
-  div.picture{
-   width:100%;
-  height: 100%;
-}
-  div.picture1{
-    width: 24.5%;
-    height: 20.72%;
-    top:4.635%;
-    left:17%;
-}
-  div.picture2{
-      width:24.53%;
-      height: 23.07%;
-      top:11.718%;
-      left:33.5%;
-  }
-  div.picture3{
-    width: 24.5%;
-    height: 20.72%;
-    top:19.531%;
-    left:50.1%;
-  }
-}
+	     
+    	*{background-color: rgba(0,0,0,0.08);}
+    html,body{
+      width:100vw;
+      height:100vh;
+      overflow:hidden;
+      margin:0;
+    }
+    div.picture{
+      width:800px;
+      height: 800px;
+      margin:auto;
+      position:relative;
+    }
+    
+    div.picture1{
+      width: 265px;
+      height: 398px;
+      background-image: url(https://daneden.imgix.net/2018/10/portrait.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
+     background-position: 50%;
+      background-size:cover ;
+      position:absolute;
+      top:89px;
+      left:136px;
+      
+    }
+    
+    
+    div.picture2{
+      width:265px;
+      height: 443px;
+      background-image: url(https://daneden.imgix.net/2018/10/GenArt.png?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
+      background-size:cover;
+      background-position: 50%;
+      position:absolute;
+      top:225px;
+      left:268px;
+      z-index:2;
+      }
+    div.picture3{
+      width: 265px;
+      height: 398px;
+      background-image: url(https://daneden.imgix.net/2018/10/home.jpg?auto=format&dpr=1&fm=pjpg&crop=faces&fit=max&w=300&h=1&ixlib=react-7.2.0);
+      background-position: 50%;
+      background-size:cover ;
+      position:absolute;
+      top:375px;
+      left:401px;
+     
+    }
+    div>div:hover{
+      z-index:8;
+    
+    }
+    
+    @media screen and (max-width:420px) and (min-resolution:2dppx){
+      div.picture{
+       width:100%;
+      height: 100%;
+    }
+      div.picture1{
+        width: 24.5%;
+        height: 20.72%;
+        top:4.635%;
+        left:17%;
+    }
+      div.picture2{
+          width:24.53%;
+          height: 23.07%;
+          top:11.718%;
+          left:33.5%;
+      }
+      div.picture3{
+        width: 24.5%;
+        height: 20.72%;
+        top:19.531%;
+        left:50.1%;
+      }
+    }
   </style>
 </head>
 <body>
