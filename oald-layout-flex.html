@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style type="text/css">
+        *{background-color: rgba(0,0,0,0.08);}
+    section.first{
+      display:flex;
+      flex-direction:column;
+      flex-wrap:wrap;
+      height:500px;
+      
+    }
+    section.first>div{
+      height:100%;
+     width:10%;
+     background-color: red;
+      border:1px solid pink;
+      box-sizing:border-box;
+    
+    }
+    section.first>div.first2{
+      height:20%;
+      background-color:blue;
+      width:70%;
+    
+    }
+    section.first>div.first3{
+      height:80%;
+      background-color: violet;
+     width:70%;
+    }
+    
+    section.second{
+      display:flex;
+      height:500px;
+      overflow:hidden;
+    }
+    section.second>div{
+      background-color: pink;
+      width:10%;
+      border:1px solid green;
+    }
+    section.second>div.second2{
+      width:70%;
+      display:flex;
+      flex-wrap:wrap;
+    }
+    div.second2>header{
+      height:50px;
+      background-color: blue;
+      width:100%;
+    }
+    div.second2>main{
+      height:100%;
+      width:100%;
+      background-color: tan;
+    }
+  </style>
+</head>
+<body>
+ <h1>第一种 五个兄弟元素 纵向</h1>
+  <section class="first">
+    <div class="first1">1</div>
+    <div class="first2">2</div>
+    <div class="first3">3</div>
+    <div class="first4">4</div>
+    <div class="first5">5</div>
+  </section>
+  <h2>第二种 四个兄弟元素 横向</h2>
+  <section class="second">
+    <div class="second1">1</div>
+    <div class="second2">
+      <header>2</header>
+      <main>5</main>
+    </div>
+    <div class="second3">3</div>
+    <div class="second4">4</div>
+  </section>
+</body>
+</html>
