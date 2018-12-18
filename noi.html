@@ -96,7 +96,7 @@
     var a = +prompt('')
     var b = +prompt('')
     var c = +prompt('')
-    console.log((a+b)/c)
+    console.log(Math.floor((a+b)/c))
 </script>
 <script type="ch0103/04" id="ch0103/04">
     var a = +prompt('')
@@ -136,12 +136,10 @@
 <script type="ch0103/09" id="ch0103/09">
     var r = +prompt("输入半径")
     if (0<r<=10000){
-        var p =(2*r).toFixed(5)
-        var d =(2*r*3.1415926).toFixed(5)
-        var s =(r*r*3.1415926).toFixed(5)
+        var p =(2*r).toFixed(4)
+        var d =Math.floor((2*r*3.1415926)*10000)/10000
+        var s =(r*r*3.1415926).toFixed(4)
         console.log(p+'\ '+d+'\ '+s)
-    }else{
-        alert("0<r<=10000")
     }
 </script>
 <script type="ch0103/10" id="ch0103/10">
