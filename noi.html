@@ -167,15 +167,274 @@
         for(var i =a.length;i>=0;i -= 1)
         b +=a.charAt(i);
         console.log(b)   
-    } 
- 　
-           
-　　　　　 
+    } 　　　　 
 </script>
-<script type="" id=""></script>
-<script type="" id=""></script>
-<script type="" id=""></script>
-<script type="" id=""></script>
-<script type="" id=""></script>
-<script type="" id=""></script>
+<script type="ch0103/14" id="ch0103/14">
+    var h = +prompt("");
+    var r = +prompt("");
+    var t = 3.14159*r*r*h
+    var n = 20000/t 
+    console.log(Math.ceil(n))
+</script>
+<script type="ch0103/15" id="ch0103/15">
+   var n = +prompt("");
+   var x = +prompt("");
+   var y = +prompt(""); 
+   if(y <= n*x){
+       var m = Math.ceil(y/x)
+       console.log(n-m)
+   }
+</script>
+<script type="ch0103/16" id="ch0103/16">
+   var xa = +prompt("");
+   var ya = +prompt("");
+   var xb = +prompt(""); 
+   var yb = +prompt(""); 
+    var m = xa - xb 
+    var n = ya - yb
+    var c = m*m + n*n
+    console.log(Math.sqrt(c).toFixed(3))
+
+</script>
+<script type="ch0103/17" id="ch0103/17">
+   var x1 = +prompt("");
+   var y1 = +prompt("");
+   var x2 = +prompt(""); 
+   var y2 = +prompt("");
+   var x3 = +prompt("");
+   var y3 = +prompt("");
+   var a = Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
+   var b = Math.sqrt((x1-x3)*(x1-x3)+(y1-y3)*(y1-y3))
+   var c = Math.sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3))
+   var p = (a+b+c)/2
+   var s = Math.sqrt(p*(p-a)*(p-b)*(p-c))
+   console.log(s.toFixed(2))
+</script>
+<script type="ch0103/18" id="ch0103/18">
+    var a1 = +prompt("");
+    var a2 = +prompt("");
+    var n = +prompt("");
+    if (a1%1==0&&a2%1==0&&n%1==0&&-100<=a1,a2<=100&&0<n<1000){
+        var d = a2 - a1
+        var an = a1 + (n-1)*d
+        console.log(an)
+    }
+</script>
+<script type="ch0103/19" id="ch0103/19">
+    var A = +prompt("");
+    var B = +prompt("");
+    if((A,B)%1==0||1<=(A,B)<=50000){
+        var s = A*B 
+        console.log(s)
+    }
+</script>
+<script type="ch0103/20" id="ch0103/20">
+    var n = +prompt("")
+    var s = 2
+   if(0<=n<=31){
+       for(var count = n  ; count>1;count--){
+           var s = s*2
+       }
+        console.log(s)
+       } 
+</script>
+<!-- 1.4题目 -->
+<script type="ch0104/01" id="ch0104/01">
+    var p = +prompt("")
+    if (p%1==0||-1e9<=p<=1e9){
+        if (p>0){
+            console.log("positive")
+        }else if(p=0){
+            console.log("zero")
+        }else {
+            console.log("negative")
+        }
+    }
+</script>
+<script type="ch0104/02" id="ch0104/02">
+    var p = +prompt("")
+    var p = p.toFixed(2)
+    console.log(p>0?p:-p)
+</script>
+<script type="ch0104/03" id="ch0104/03">
+    var n = +prompt("")
+    if (n>0||n%1==0){
+        if(n%2==0){
+            console.log("even")
+        }else {
+            console.log("odd")
+        }
+    }
+</script>
+<script type="ch0104/04" id="ch0104/04">
+    var n = prompt("")
+    console.log("YES")
+</script>
+<script type="ch0104/05" id="ch0104/05">
+    var x = prompt("")
+    var y = prompt("")
+    if((x,y)%1==0||0<=x<=Math.pow(2,31)||Math.pow(-2,31)<=y<=Math.pow(2,31)){
+        if(x>y){
+            console.log(">")
+        }else if(x=y){
+            console.log("=")
+        }else{
+            console.log("<")
+        }
+    }
+</script>
+<script type="ch0104/06" id="ch0104/06">
+    var a = +prompt("")
+    console.log(a.length==2?1:0)
+</script>
+<script type="ch0104/07" id="ch0104/07">
+    var a = +prompt("")
+    var b = +prompt("")
+    console.log(a>=10||b>=20?1:0)
+</script>
+<script type="ch0104/08" id="ch0104/08">
+    var n = +prompt("")
+    if(-1e6<n<1e6){
+    console.log(n%3==0&&n%5==0?"YES":"NO")
+    }
+</script>
+<script type="ch0104/09" id="ch0104/09">
+    var n = +prompt('')
+    if (n%3==0&&n%5==0&&n%7==0){
+        console.log("3 5 7")
+    }else if (n%3==0&&n%5==0){
+        console.log("3 5 ")
+    }else if (n%3==0&&n%7==0){
+        console.log("3 7")
+    }else if (n%5==0&&n%7==0){
+        console.log("5 7")
+    }else if (n%3==0){
+        console.log("3")
+    }else if (n%5==0){
+        console.log("5")
+    }else if (n%7==0){
+        console.log("7")
+    }else {
+        console.log("n")
+    }
+</script>
+<script type="ch0104/10" id="ch0104/10">
+    var a =+prompt("")
+    var b =+prompt("")
+    if(0<a,b<100){
+    console.log((a<60&&b>60)||(a>60&&b<60)?1:0)
+    }
+</script>
+<script type="ch0104/11" id="ch0104/11">
+    var a =+prompt("")
+    if(a%1==0&&1<=a<=7){
+        console.log(a==1||a==3||a==5?"NO":"YES")
+    }
+</script>
+<script type="ch0104/12" id="ch0104/12">
+    var n = +prompt("")
+    var d = 50
+    var w = n/1.2
+    var b = n/3+d
+    if (w==b){
+        console.log("All")
+    }else{
+         console.log(w>b?"Bike":"Walk")
+    }
+   
+</script>
+<script type="ch0104/13" id="ch0104/13">
+    var x =+prompt("")
+    if(0<=x<5){
+        var y =-x+2.5
+    }else if(5<=x<10) {
+        var y = 2-1.5*(x-3)*(x-3)
+    }else if (10<=x<20){
+        var y = x/2-1.5
+    }
+        console.log(y.toFixed(3))
+</script>
+<script type="ch0104/14" id="ch0104/14">
+    var g =+prompt("")
+    var m = prompt("")
+    if (g<=1000){
+        var d = 8
+    }else{
+        var d = Math.ceil((g-1000)/500)*4+8
+    }
+    console.log(m=="y"?d+5:d)
+</script>
+<script type="ch0104/15" id="ch0104/15">
+    var a = +prompt("")
+    var b = +prompt("")
+    var c = +prompt("")
+    if (c%1==0&&a%1==0&&b%1==0){
+        console.log(Math.max(a,b,c))
+    }
+</script>
+<script type="ch0104/16" id="ch0104/16">
+    var a =+prompt("")
+    var b =+prompt("")
+    var c =+prompt("")
+    var s = a+b+c
+    var d = Math.max(a,b,c)
+    console.log(s>2*d?"YES":"NO")
+
+    
+</script>
+<script type="ch0104/17" id="ch0104/17">
+    var y = +prompt("")
+    console.log(y%400==0||(y%4==0&&y%100!=0)?"Y":"N")
+</script>
+<script type="ch0104/18" id="ch0104/18">
+    var x =+prompt("")
+    var y=+prompt("")
+    console.log(-1<=x<=1&&-1<=y<=1?"yes":"no")
+</script>
+<script type="ch0104/19" id="ch0104/19">
+    var x =+prompt("")
+    var y=+prompt("")
+    var z=prompt("")
+    if (z=="+"){
+        var s=x+y
+    }else if(z=="-"){
+        var s=x-y
+    }else if (z=="*"){
+        var s=x*y
+    }else if(z=="/"){
+        var s = x/y
+    }else {
+        console.log("Invalid operator!")
+    }
+    console.log(s)
+</script>
+<script type="ch0104/20" id="ch0104/20">
+    var a =+prompt('a的值')
+    var b =+prompt('b的值')
+    var c =+prompt('c的值')
+    var d = b*b -4*a*c
+    if (d==0){
+        var x1=-b/(2*a)
+        console.log("x1=x2="+x1.toFixed(5))
+    }else if(d>0){
+        var x1=((-b+Math.sqrt(d))/(2*a)).toFixed(5);
+        var x2=((-b-Math.sqrt(d))/(2*a)).toFixed(5);
+        console.log("x1="+Math.max(x1,x2)+";"+"x2="+Math.min(x1,x2))    
+    }else {
+        var t = ((Math.sqrt(-d))/(2*a)).toFixed(5)
+        var f = (-b/(2*a)).toFixed(5)
+        var tj = Math.abs(t)
+        var x2 = f +"-"+t+"i"
+        var x1 = f + "+"+t+"i"
+        console.log("x1="+x1+';'+"x2="+x2)
+    }
+</script>
+<script type="ch0104/21" id="ch0104/21">
+    var n =+prompt("")
+    var x=+prompt("")
+    var y =+prompt("")
+    var s = Math.ceil(y/x)
+    console.log(n-s)
+    
+</script>
 <script type="" id=""></script>
