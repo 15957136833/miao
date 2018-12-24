@@ -346,11 +346,11 @@
 </script>
 <script type="ch0104/13" id="ch0104/13">
     var x =+prompt("")
-    if(0<=x<5){
+    if(x<5){
         var y =-x+2.5
-    }else if(5<=x<10) {
+    }else if(x<10) {
         var y = 2-1.5*(x-3)*(x-3)
-    }else if (10<=x<20){
+    }else if (x<20){
         var y = x/2-1.5
     }
         console.log(y.toFixed(3))
@@ -390,8 +390,9 @@
 <script type="ch0104/18" id="ch0104/18">
     var x =+prompt("")
     var y=+prompt("")
-    console.log(-1<=x<=1&&-1<=y<=1?"yes":"no")
+    console.log(-1<=x&&x<=1&&-1<=y&&y<=1?"yes":"no")
 </script>
+
 <script type="ch0104/19" id="ch0104/19">
     var x =+prompt("")
     var y=+prompt("")
@@ -438,4 +439,443 @@
     console.log(n-s)
     
 </script>
+<!-- 1.5题目 -->
+<script type="ch0105/01" id="ch0105/01">
+    var n = prompt("")
+    var b=0;
+    for(var count=0 ;count<n;count++){
+        var a =+prompt("")
+         b = b +a
+    }
+    var v = (b / n).toFixed(2)
+    console.log(v) 
+</script>
+<script type="ch0105/02" id="ch0105/02">
+    var n = 12
+    var m = 0
+    for (var counter = 0;counter <n;counter++){
+        var $ = +prompt("")
+        m = m +$
+    }
+    var v = (m / n).toFixed(2)
+    console.log("$"+v)
+
+</script>
+<script type="ch0105/03" id="ch0105/03">
+    var n = +prompt()
+    var s=0
+    for (var counter = 0;counter<n;counter++){
+        var a = +prompt("")
+        
+        s=s+a
+    }
+    var v = (s / n).toFixed(4)
+    console.log(v)
+</script>
+<script type="ch0105/04" id="ch0105/04">
+    var n=+prompt()
+    var s =0
+    for(counter = 0;counter<n;counter++){
+        a=+prompt()
+        s+=a
+    }
+    console.log(s+" "+(s/n).toFixed(5))
+</script>
+<script type="ch0105/05" id="ch0105/05">
+    var n =+prompt()
+    var m=0
+    for(counter=0;counter<n;counter++){
+        a=+prompt()
+        m=m>a?m:a
+    }
+    console.log(m)
+</script>
+<script type="ch0105/06" id="ch0105/06">
+    var n=+prompt()
+    var l = -Infinity
+    var s = Infinity
+    for (counter=0;counter<n;counter++){
+        var a=+prompt()
+        l = l>a?l:a
+        s = s>a?a:s
+    }
+    console.log(l-s)
+</script>
+<script type="ch0105/07" id="ch0105/07">
+    var n = +prompt("")
+    var g = 0
+    var s = 0
+    var c = 0
+    for(var counter=0;counter<n;counter++){
+        g += +prompt("")
+        s += +prompt("")
+        c += +prompt("")
+    }
+    console.log(g+" "+s+" "+c+' '+(g+s+c))
+</script>
+<script type="ch0105/08" id="ch0105/08">
+    var n = +prompt()
+    var a = 0
+    for(counter=0;counter<n-1;counter++){
+        a += +prompt()
+    }
+    console.log((n-2)*180 - a)
+</script>
+<script type="ch0105/09" id="ch0105/09">
+    var m = +prompt()
+    var n = +prompt()
+    var s = 0
+    if (m % 2 ==0){
+        m = m + 1
+    }
+    for (counter = m; counter <= n; counter +=2 ){
+        s += counter
+    }
+    console.log(s)
+</script>
+<script type="ch0105/10" id="ch0105/10">
+    var m = +prompt()
+    var n = +prompt()
+    var s = 0
+    for (counter = m;counter <= n;counter++){
+        if(counter%17==0){
+            s += counter
+        }
+    }
+    console.log(s)
+</script>
+<script type="ch0105/11" id="ch0105/11">
+    var k = +prompt()
+    var n1 = 0
+    var n5 = 0
+    var n10 = 0
+    for (counter=0;counter<k;counter++){
+        a = +prompt()
+        if (a==1){
+            n1 += 1
+        }
+        if ( a==5){
+            n5 += 1
+        }
+        if (a==10){
+            n10 +=1
+        }
+    }
+    console.log(n1+'\n'+n5+'\n'+n10)
+</script>
+<script type="h0105/12" id="h0105/12">
+    var N = +prompt()
+    var m = +prompt()
+    var s = 0
+    for (counter = 0;counter<N;counter++){
+        a = +prompt()
+        if (a==m){
+            s += 1
+        }
+    }
+    console.log(s)
+</script>
+<script type="ch0105/13" id="ch0105/13">
+    var a = +prompt()
+    var n = +prompt()
+    var s = 1
+    for(counter=0;counter<n;counter++){
+        s *= a
+        if (s>1e6){
+            console.log("当心")
+            break;
+        }
+    }
+    console.log(s)
+</script>
+<script type="ch0105/14" id="ch0105/14">
+    var x =+prompt()
+    var n = +prompt()
+    for(counter=0;counter<n;counter++){
+        x = x *(1+0.001)
+    }
+    console.log(x.toFixed(4 ))
+</script>
+<script type="ch0105/15" id="ch0105/15">
+    var R =+prompt()
+    var M=+prompt()
+    var Y=+prompt()
+   
+    for(var counter=0;counter<Y;counter++){
+        M=M*(1+R/100)
+    }
+    console.log(Math.floor(M))
+</script>
+<script type="ch0105/16" id="ch0105/16">
+    var N=+prompt()
+    var K=+prompt()
+    var s = N
+    var h = 200
+    var k=K/100+1
+    for(var counter = 2;counter<20;counter++){
+        s=s+N
+        h*=k
+        if(s>=h){
+            break;
+        }
+        
+    }
+    console.log(counter)         
+</script>
+<script type="ch0105/17" id="ch0105/17">
+    var k = +prompt()
+    var a1=1
+    var a2=1
+    var s 
+    for (var i=3;i<=k;i++){
+        s=a1+a2
+        a1=a2
+        a2=s
+    }
+    console.log(s)
+</script>
+<script type="ch0105/18" id="ch0105/18">
+    var n=+prompt()
+    var a=+prompt()
+    var b=+prompt()
+    var x=b/a
+    for(var i=0;i<(n-1);i++){
+        var c=+prompt()
+        var d=+prompt()
+        y=d/c
+        if((y-x)>0.05){
+            console.log("better")
+        }else if((x-y)>0.05){
+            console.log("worse")
+        }else {
+            console.log("same")
+        }
+    }
+</script>
+<script type="ch0105/19" id="ch0105/19">
+    var n=+prompt()
+    var c
+    var t=0
+    for(var i=0;i<n;i++){
+        var a=+prompt()
+        var b=+prompt()
+        var d=+prompt()
+        c=Math.sqrt((a*a+b*b))
+        t=t+c/50*2+d+0.5*d
+    }
+    console.log(Math.ceil(t))
+</script>
+<script type="ch0105/20" id="ch0105/20">
+    var h=+prompt()
+    var s=h
+    for(var i=0;i<9;i++){
+         
+        h=h/2  
+        s=s+h*2
+    }
+    console.log(s.toFixed(4))
+    console.log((h/2).toFixed(7))
+</script>
+<script type="ch0105/21" id="ch0105/21">
+    var N=+prompt()
+    var s=""
+    for(i=0;;i++){
+        if(N==1){
+            console.log("End")
+            break;
+        }
+        if (N%2==0){
+            N=N/2
+            s=N*2+"/"+2+"="+N
+            console.log(s)
+            
+        }else{
+            N=N*3+1
+            s=s+(N-1)/3+"*"+3+"+"+"1"+"="+N
+            console.log(s)
+            
+        }
+    }
+</script>
+<script type="ch0105/22" id="ch0105/22">
+    var j=0
+    var s=0
+    var S=0
+    for(var i=0;i<12;i++){
+        var p=+prompt()
+        if((300+j)<p){
+            console.log(-i-1);
+            break;
+        }
+       var y= Math.ceil((p-j)/100) *100
+        j = j+ y -p
+        s=s+ 300 - y
+         
+    }
+    if((300+j)>p){
+        console.log(s*1.2+j)
+    }
+</script>
+<script type="ch0105/23" id="ch0105/23">
+    var m =+prompt()
+    var n=+prompt()
+    var x=0
+    for (var i=0;i<n;i++){
+        var b=+prompt()
+        if(m<b){
+            x++
+        }else{
+            m=m-b
+        }
+    }
+    console.log(x)
+</script>
+<script type="ch0105/24" id="ch0105/24">
+    var n=+prompt()
+    var m
+    for(i=0;i<n;i++){
+        var a=+prompt()
+        var b=+prompt()
+        if (a<90||a>140||b<60||b>90){
+            break;
+        } 
+    }
+    console.log(i+1)
+</script>
+<script type="ch0105/25" id="ch0105/25">
+    var x
+    var y
+    var z
+    var s
+    for(var a=0;a<7;a++){
+        for(var b=0;b<7;b++){
+            for(var c=0;c<7;c++){
+                if (a*7*7+b*7+c==c*9*9+b*9+a){
+                    x=a
+                    y=b
+                    z=c
+                    s=a*7*7+b*7+c
+                    break;
+                }
+            }
+        }
+    }
+    console.log(s)
+    console.log(""+x+y+z)
+    console.log(""+z+y+x)
+
+</script>
+<script type="ch0105/26" id="ch0105/26">
+    var n = +prompt()
+    var s = 0
+    for (var i=0;i<n;i++){
+       var b = prompt()
+        if(b.charAt(3)-b.charAt(0)-b.charAt(1)-b.charAt(2)>0){
+            s++
+        }
+    }
+    console.log(s)
+</script>
+<script type="ch0105/27" id="ch0105/27">
+    var sn =0
+    var k = +prompt()
+    for(i=1;i<100;i++){
+        sn = sn+1/i
+        if (sn>k){
+            console.log(i);
+            break;
+        }
+    }
+</script>
+<script type="ch0105/28" id="ch0105/28">
+    var k = prompt()
+    var n = k.length
+    var b = ""
+    for (var i = n-1;i>=0;i--){
+        b=b+k.charAt(i)+" "
+    }
+    console.log(b)
+</script>
+<script type="ch0105/29" id="ch0105/29">
+    // var n = prompt()
+    // var m = +n
+    // var a=0
+    // var b=""
+    // var c=n.length
+    // if (m==0){
+    //     console.log(0)
+    // }
+    // for (var i=0;i<10;i++){
+    //     if(m%10==0){
+    //         m=m/10;
+    //         a=a+1
+    //     }else {
+    //         break;
+    //     }
+    // } 
+    // if (+n>0){
+    //     for (var i=c-a-1;i>=0;i--){
+    //         b=b+n.charAt(i)
+    //     }
+    // }else if (+n<0){
+    //     b="-"
+    //     for(var i=c-a-1;i>0;i--){
+    //         b=b+n.charAt(i)
+    //     }
+    // }
+    // console.log(b)
+    var n = prompt()
+    var m = +n
+    var a=0
+    var b=""
+    var c=n.length
+    if (m==0){
+        console.log(0)
+    }
+    for (var i=0;i<10;i++){
+        if(m%10==0){
+            m=m/10;
+            a=a+1
+        }else {
+            break;
+        }
+    } 
+    for(var i=c-a-1;i>0;i--){
+        b=b+n.charAt(i)
+    }
+    if (+n>0){
+        b=b+n.charAt(0)
+    }else if(+n<0){
+        b="-"+b
+    }
+    console.log(b)
+
+</script>
+<script type="ch0105/30" id="ch0105/30">
+    var m=prompt()
+    var k=+prompt()
+    var n=m.length
+    var s=0
+    if(m%19!=0){
+        console.log("NO")
+    }else {
+        for (var i =0;i<n;i++){
+            if (m.charAt(i)==3){
+                s++
+            }
+        }
+        if (s==k){
+            console.log("YES")
+        }else {
+            console.log("NO")
+        }
+    }
+</script>
+<script type="" id="">
+    
+</script>
 <script type="" id=""></script>
+<script type="" id=""></script>
+<script type="" id=""></script>
+
+
