@@ -561,9 +561,11 @@
             n10 +=1
         }
     }
-    console.log(n1+'\n'+n5+'\n'+n10)
+    console.log(n1)
+    console.log(n5)
+    console.log(n10)  
 </script>
-<script type="h0105/12" id="h0105/12">
+<script type="ch0105/12" id="ch0105/12">
     var N = +prompt()
     var m = +prompt()
     var s = 0
@@ -760,9 +762,10 @@
             }
         }
     }
-    console.log(s)
-    console.log(""+x+y+z)
-    console.log(""+z+y+x)
+    // console.log(s)
+    // console.log(""+x+y+z)
+    // console.log(""+z+y+x)
+    console.log("（不提供）")
 
 </script>
 <script type="ch0105/26" id="ch0105/26">
@@ -792,7 +795,11 @@
     var n = k.length
     var b = ""
     for (var i = n-1;i>=0;i--){
-        b=b+k.charAt(i)+" "
+        if (i>0){
+            b=b+k.charAt(i)+" "
+        }else if (i==0){
+            b=b+k.charAt(i)
+        }
     }
     console.log(b)
 </script>
@@ -871,11 +878,219 @@
         }
     }
 </script>
-<script type="" id="">
-    
+<script type="ch0105/31" id="ch0105/31">
+    var n = +prompt()
+    var M = +prompt()
+    var  light_off = "1"
+    for (var i = 2;i<=n;i++){
+        var light = false
+        for(var j = 2;j<=M;j++){
+            if(j>i){
+                break;
+            }
+            if (i%j==0){
+                light = !light
+            }    
+        }   
+        if (light == false){
+                light_off = light_off +","+i
+            } 
+    }
+    console.log(light_off)
+</script>
+<script type="ch0105/32" id="ch0105/32">
+    var n = +prompt()
+    var q1 = 2
+    var p1 = 1
+    var sum = 2/1
+    for(var i = 2;i<=n;i++){
+        q1 = q1 + p1
+        p1 = q1 - p1
+        sum += q1/p1
+    }
+    console.log(sum.toFixed(4))
+</script>
+<script type="ch0105/33" id="ch0105/33">
+    var n = +prompt()
+    var sum = 1
+    var an  
+    for (var i =2;i<=n;i++){
+        an = 1 / i * (-1)
+        sum += an
+    }
+    console.log(sum.toFixed(4))
+</script>
+<script type="ch0105/34" id="ch0105/34">
+    var n = +prompt()
+    var sum =0
+    var an = 1
+    for(var i = 1 ;i<=n;i++){
+        an *= i
+        sum += an
+    }
+    console.log(sum)
+</script>
+<script type="ch0105/35" id="ch0105/35">
+    var n = +prompt()
+    var e = 1
+    var an =1
+    for (var i = 1;i<=n;i++){
+        an = an*i
+        e += 1/an
+    }
+    console.log(e.toFixed(10))
+</script>
+<script type="ch0105/36" id="ch0105/36">
+    var x = +prompt()
+    var n = +prompt()
+    var an = 1
+    var sum = 1
+    for (var i = 1;i<=n;i++){
+        an=an*x
+        sum = sum +an
+    }
+    console.log(sum.toFixed(2))
+</script>
+<script type="ch0105/37" id="ch0105/37">
+    var M = +prompt()
+    var N = +prompt()
+    var X = +prompt()   
+    var power = N
+    for(var i = 0;i<X;i++){
+        var K = M
+        if (K>=power){
+            K = K - power
+            power +=1
+        }
+    }
+    console.log(power)
 </script>
 <script type="" id=""></script>
-<script type="" id=""></script>
+<script type="ch0105/39" id="ch0105/39">
+    var n = +prompt()
+
+    var k,has7,digat,sum=0
+    for(var i = 1;i<=n;i++){
+        if (i%7!=0){
+            k=i
+            has7=false;
+            while(k>0){
+            digat=k%10
+            if (digat == 7){
+                has7=true
+                break;
+            }
+            k = (k-digat)/10
+            }
+            if(has7==true){
+            continue;
+            }
+            sum += i*i
+        }   
+    }
+    console.log(sum)
+
+</script>
+<script type="ch0105/40" id="ch0105/40">
+    var n = +prompt()
+    var digat,k,sum = 0
+    for (var i = 1;i<=n;i++){
+        k=i
+        while(k>0){
+            digat=k%10
+           if (digat%10 ==1){
+               sum++
+           }
+           k=(k-digat)/10
+        }
+    }
+    console.log(sum)
+</script>
+<script type="ch0105/41" id="ch0105/41">
+    var l= +prompt()
+    var r=+prompt()
+    var k,digat,sum=0
+    for(var i=l;i<=r;i++){
+        k=i
+        while(k>0){
+            digat=k%10
+            if (digat==2){
+            sum++
+            }
+            k=(k-digat)/10
+        }
+    }
+    console.log(sum)
+</script>
+<script type="ch0105/42" id="ch0105/42">
+    var m = +prompt()
+    var n = +prompt()
+    var x =  prompt()
+    var y = +prompt()
+    var sum = ""
+    for (var i = 0;i<m;i++){
+        for (var j = 0;j<n;j++){
+            if (y){
+                sum += x
+            }else {
+                if (i==0||j==0||i==m-1||j==n-1){
+                    sum += x
+                }else{
+                    sum += " "
+                }
+            }
+        }
+        sum += "\n"
+    }
+    console.log(sum)
+</script>
+<script type="ch0105/43" id="ch0105/43">
+    var n = +prompt()
+    var k = n
+    for (var i = 2;i<=n;i++){
+        
+        while (k%i==0&&k>i){
+            k = k/i
+        }   
+    }
+    console.log(k)
+</script>
+<script type="ch0105/44" id="ch0105/44">
+    var n=+prompt()
+    var k = 1,j = 3,m
+    while(k<n){
+        m = false
+        for(var i = 2;i<j;i++){
+            if(j%i==0){
+                m=true
+                break;
+            }    
+        }    
+        if (m==false){
+            k=k+1
+        }
+        j++
+    }
+    console.log(j-1)
+</script>
+<script type="ch0105/45" id="ch0105/45">
+    var n = +prompt()
+    var sum = 0
+    var i = 1
+    var k = 1
+    while(k<=n){
+       
+        for (var j =1 ; j<=i;j++){
+            k =k+1
+            sum = sum + i 
+            if (k>n){
+                break;
+            }
+        }
+        i++
+    }
+    console.log(sum)
+</script>
 <script type="" id=""></script>
 
 
