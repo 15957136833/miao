@@ -1,4 +1,4 @@
-var USERNAME = function(){
+var liuainan = function(){
 
   function chunk(ary, size = 1) {
   	var result=[],j=0,k=0
