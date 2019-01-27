@@ -92,7 +92,7 @@ var liuainan = function(){
 	}
 	function spread(func){
 		return function(array){
-			return func.apply(this,arra y)
+			return func.apply(this,array)
 		}
 	}
 	function bind(){
@@ -103,7 +103,7 @@ var liuainan = function(){
     concat:concat,
     difference:difference,
     after:after,
-    unary:nuary,
+    unary:unary,
     ary:ary,
     flip:flip,
     negate:negate,
