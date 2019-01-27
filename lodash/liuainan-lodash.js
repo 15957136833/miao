@@ -59,11 +59,54 @@ var liuainan = function(){
   		}
 	  	return result
 	}
-
+	function after(n,func){
+		var calledTimes=0
+		return function(...args){
+			calledTimes++
+			if(calledTimes>=n){
+			 return func(...args)
+			}
+		}
+	}
+	function unary(func){
+		return function (...args){
+			var first=args.slice(0,1)
+			return func.call(this,...first)
+		}
+	}
+	function ary(func ,n=func.length){
+		return function(...args){
+			var first=args.slice(0,n)
+			return func(...first)
+		}
+	}
+	function flip(func){
+		return function (...args){
+			return func(...args.reverse())
+		}
+	}
+	function negate(predicate){
+		return function(...args){
+			return !predicate(...args)
+		}
+	}
+	function spread(func){
+		return function(array){
+			return func.apply(this,arra y)
+		}
+	}
+	function bind(){
+	}
   return {
     chunk: chunk,
     compact:compact,
     concat:concat,
     difference:difference,
+    after:after,
+    unary:nuary,
+    ary:ary,
+    flip:flip,
+    negate:negate,
+    spread:spread
   }
 }()
